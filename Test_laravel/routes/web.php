@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
+Route::get('user/{id}/{name}', function ($id, $name) {
+    return $id . $name;
+})->where(['id' => '[0-9]+', 'name' => '[A-Za-z]+']);
+
+*/
+/* Route::get('/contact/{name}','TestController@contact'); */
+
+Route::get('/contact', 'ContactController@newContact');
+
+Route::get('/listecontacts','ContactController@listContacts');
